@@ -1,0 +1,19 @@
+body { margin: 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+header { display: flex; justify-content: space-between; align-items: center; padding: 15px 60px; position: fixed; width: 100%; top: 0; left: 0; box-sizing: border-box; }
+#page-logo a { padding: 10px; color: rgb(245, 243, 160); font-size: 50px; text-decoration: none; text-transform: uppercase; text-shadow: 1px 1px 2px rgb(0, 0, 0); }
+/* text-transform = 문자들이 보여지는 방식을 정할 수 있다.(대문자, 소문자 등) */
+header ul { display: flex; }
+header li { margin-left: 20px; }
+header a { color: rgb(255, 251, 0); text-decoration: none; font-size: 20px; padding: 12px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+header nav a:hover { color: rgb(77, 77, 77); background-color: rgb(255, 251, 0); border-radius: 6px; }
+
+footer { background: linear-gradient(70deg, rgb(24, 24, 24), rgb(25, 29, 29) ); padding: 40px; }
+footer ul { display: flex; justify-content: center; }
+footer li { width: 80px; height: 80px; margin: 0 50px; }
+/* 
+사이 간격은 margin 높이에 영향을 주고 싶을 때는 paading 
+이미지는 height를 추가할 수 있는 유일한 요소이다. 보편적으로는 특정 요소의 높이를 조절하려면 padding을 사용한다.
+*/
+footer img { width: 100%; height: 100%; }

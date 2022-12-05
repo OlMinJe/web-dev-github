@@ -1,0 +1,29 @@
+#hero { height: 800px; background-image: url("/image/places/ocean.jpg"); background-position: center; background-size: cover; }
+#hero-content { width: 900px; background-color: rgba(51, 47, 47, 0.8); box-shadow: 2px 4px 8px rgb(68, 67, 67); border-radius: 8px; text-align: center; padding: 50px 0; margin: 0 auto; position: relative; top: 200px; }
+#hero-content h1 { color: white; text-transform: uppercase; font-size: 50px; margin: 0; }
+#hero-content p { color: white; text-transform: uppercase; font-size: 24px; font-weight: 300; margin-bottom: 32px;; }
+#hero-content a { text-decoration: none; background-color: rgb(255, 251, 0); padding: 12px 14px; color: black; font-size: 24px; font-weight: 700; border-radius: 8px; box-shadow: 2px 4px 8px rgb(68, 67, 67); }
+#hero-content a:hover { background-color: rgb(255, 238, 0); }
+
+#hightlights { padding: 24px; background: linear-gradient(0deg, rgb(227, 255, 253), rgb(202, 243, 240)); }
+/*
+linear-gradient(각도, 색상1, 색상2)
+*/
+#hightlights h2 { text-transform: uppercase; text-align: center; font-size: 40px; color: rgb(59, 65, 64); margin: 24px 0; }
+#destinations  { display: flex; justify-content: center; width: 90%; margin: auto; margin-bottom: 40px; }
+.destination { margin: 0 20px; text-transform: uppercase; }
+.destination img { height: 200px; width: 100%; box-shadow: 2px 4px 8px rgb(68, 67, 67); border-radius: 10px; object-fit: cover; }
+/* 
+object-fit 
+= 기본값 fill: 이미지들을 주어진 치수에 맞게 잘 조절함 <-> 필요에 따라 이미지들이 늘어지거나 찌그러질 수도 있다.) 
+= contain: 종횡비가 그대로 남아서 이미지가 컨테이너 안으로 밀어넣어지지 않음 = 이미지가 컨테이너에 맞게 조절됨
+        <-> 컨테이너 비율에 따라 빈 공간이 생길 수 있다.
+= cover: 좋횡비가 그대로 유지되면서 컨테이너를 채움
+*/
+.destination p { text-align: center; font-size: 24px; color: rgb(124, 123, 123); margin: 20px 0; }
+.destination strong { color: rgb(0, 160, 117); }
+
+/*
+'마진 겹친 현상'은 인접 요소 사이에서만 일어나는 것이 아니라 부모-자식 관계에서도 발생한다.
+마진이나 패딩이 적용되지 않은 부모 요소 안에 마진이 있는 자식이 있을 때. -> 부모 요소에 마진 값 만큼 패딩을 더해준다.
+*/ 

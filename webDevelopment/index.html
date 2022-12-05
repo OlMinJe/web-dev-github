@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>HTML & CSS Basic Summary</h1>
+        <img src="logo.png" alt="logo">
+    </header>
+    <main>
+        <section>
+            <h2>HTML Summary</h2> <!-- 같은 형제 요소 (h2) -->
+        <p> <!-- 단락 태그 -->
+            HTML (HyperText Markup Language) is used to define our page, content, structure and meaning.
+            You <span class="highlight">don't</span> use it for styling purposes.
+            Use CSS for that instead!
+        </p>
+        <ul id="html-list">
+            <li class="extra-important">HTML uses "elements" to describe (annotent)</li>
+            <li>HTML elements typically have an opening tag, content and then a closing</li>
+            <li class="extra-important">You can also have void (empty) element like images</li>
+            <li class="extra-important">You can also configure elements with atrributes</li>
+            <li>There's a long list of avilable element but you'll gain experience over time, no worries.</li>
+        </ul>
+        <p>Laern mor about all available HTML elements on 
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">the MDN HTML element reference.</a>
+        </p>
+        </section>
+        <section>
+            <h2>CSS Summary</h2> 
+            <p>CSS (Cascading Style Sheets) is used for styling your page content.</p>
+            <ul id="css-list">
+                <li>Styles are assigned via property-value pairs</li>
+                <li>You can assign styles via the "style" attribute</li>
+                <li class="extra-important">To avoid code duplicaion, you typically use global styles (e,g, via the "style" element) instead</li>
+                <li>Alternatively, you can work with external stylesheet files which you "link" to</li>
+                <li class="extra-important">when working with CSS, concepts lick "inheritance", "specificity" and the  "box model" should be understood.</li>
+            </ul>
+            <p>Laern mor about all available CSS porperties and values on
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">the MDN CSS porperty reference.</a>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <a href="html-css-basics-summary.pdf" class="btn" target="_blank">Download PDF Summary</a> <!-- target="_self" 기본 값 -->
+        <p>(c) LEE MINJE</p>
+    </footer>
+</body>
+</html>
+
+
