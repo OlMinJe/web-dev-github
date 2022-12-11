@@ -5,17 +5,31 @@ html {
     /* 폰트 사이즈는 작은 값 부터 1, 2, 3 -- */
     background-color: var(--color-gray-100); font-family: 'Krub', sans-serif; font-weight: 400; }
 /* 변수를 만들어서 사용할 수 있다. var(변수명) */
-.card-container { background-color: rgb(255, 255, 255); width: 350px; margin: 50px auto; box-shadow: 3px 3px 10px rgb(201, 200, 200); }
+
+.card-container { transition: transform /*background-color */0.5s ease-out; background-color: rgb(255, 255, 255); width: 350px; margin: 50px auto; box-shadow: 3px 3px 10px rgb(201, 200, 200); }
+.card-container:hover { transform: scale(1.10); /*background-color: yellow;*/ }
+/* scale, rotate, */
+
 h1 { color: var(--color-gray-600); text-align: left; padding: 30px 50px 0px 50px; margin: 10px 0; font-family: 'Zilla Slab', serif; font-weight: 600; }
+
 .card-info { color: var(--color-grya-400); text-align: left; padding: 0 50px; margin: 10px 0 30px 0; }
+
 .price { color: var(--color-gray-900); background-color: var(--color-primary-300); text-align: center; margin: 30px auto 10px auto; font-size: var(--size-5); font-weight: 600; }
+
 .price-info { color: var(--color-grya-400); text-align: center; margin: 10px 0 30px 0; padding: 0 50px; }  
+
 .sub-details { width: 300px; margin: 30px 50px; }
+
 .sub-feature { display: flex; }
-.icon {  display: flex; width: 10px; }
+
+.icon {  display: flex; width: 15px; }
+
 .sub-feature-text { color: var(--color-gray-600); padding: 2px; margin: 5px; }
+
 .button-container { text-align: center; margin: 30px 0 0 0; }
-.button { color: var(--color-primary-700); text-decoration: none; text-transform: uppercase; display: inline-block; width: 70%; padding: 10px; margin: 0 0 30px 0; border: 2px solid rgb(224, 224, 224); font-size: var(--size-1); font-weight: 600; }
+
+.button { transition: background-color  0.5s ease-in; color: var(--color-primary-700); text-decoration: none; text-transform: uppercase; display: inline-block; width: 70%; padding: 10px; margin: 0 0 30px 0; border: 2px solid rgb(224, 224, 224); font-size: var(--size-1); font-weight: 600; }
+
 .button:hover { color: white; background-color: var(--color-primary-700); border: 2px solid rgb(255, 255, 255); }
 
 /*
@@ -25,4 +39,19 @@ h1 { color: var(--color-gray-600); text-align: left; padding: 30px 50px 0px 50px
 
 + html과 :root 선택자는 규칙이 포함된 요소로 상속
     <-> 별표(*) 선택자는 규칙을 html 문서의 모든 요소에 바로 추가함.
+*/
+
+/*
+1. Transformation(변환)
+2. Transition(전환)
+ex. transition: transform 0.5s ease-out 1s;
+*/
+
+/*
+svg: 벡터 기반으로 브라우저가 렌더링 할 수 있는 확정형 이미지의 텍스트 기반 묘사
+
+
+참고 사이트
+heroicns.dev
+heroicons.com
 */
