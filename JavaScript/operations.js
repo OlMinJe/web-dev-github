@@ -29,4 +29,4 @@ console.log(userName.length);
 
 let hobbies = ['스포츠','요리','독서'];
 console.log(hobbies.length);
-// 문자열은 문자의 모음, 배열은 종류에 제한 없는 값의 모음이기 때문에 lenght가 있음.
+// 문자열은 문자의 모음, 배열은 종류에 제한 없는 값의 모음이기 때문에 lengh
