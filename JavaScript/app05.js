@@ -13,13 +13,22 @@ function updateRemainingCharacters(event) {
     remainingCharsElement.textContent = remainingCharacters;
     // 상수로 저장된 객체를 바꾸기 때문에 상수 자체의 값이 바뀌지 않음.
 
-    const spanElement = document.getElementById('remaining-chars');
-    if(remainingCharsElement.innerText <= 10){
-        // spanElement.className = 'warning'; -> 클래스 추가가 아니라 초기화 후 추가
-        spanElement.classList.add('warning'); // 기존 클래스를 유지하면서 또 다른 클래스를 추가할 수 있다.
-    } else {
-        spanElement.classList.remove('warning');
+    if(remainingCharacters === 0){
+        remainingCharsElement.classList.add('error');
+        productNameInputElement.classList.add('error');
+    } else if(remainingCharacters <= 10) {
+        // remainingCharsElement.className = 'warning'; -> 클래스 추가가 아니라 초기화 후 추가
+        remainingCharsElement.classList.add('warning'); // 기존 클래스를 유지하면서 또 다른 클래스를 추가할 수 있다.
+        productNameInputElement.classList.add('warning');
+        remainingCharsElement.classList.remove('error');
+        productNameInputElement.classList.remove('error');
+    } else { 
+        remainingCharsElement.classList.remove('warning');
+        productNameInputElement.classList.remove('warning');
     }
 }
 
 productNameInputElement.addEventListener('keyup', updateRemainingCharacters);
+
+
+// [if문] 자바스크립트에서 빈 문자열 또는 숫자 0은 거짓으로 처리된다. 그 외의 경우는 참으로 처리하기 위해 노력함.
