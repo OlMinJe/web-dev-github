@@ -77,3 +77,43 @@ anchorElement.href = 'https://google.com';
 ● document.getElementsByClassName('some-css-class'): 제공된 CSS 클래스가 있는 모든 HTML 요소를 선택합니다.
 ● document.getElementsByTagName('tag'): 제공된 HTML 태그 유형의 모든 HTML 요소를 선택합니다.
 */
+
+// 1. 새로운 element 추가
+let newAnchorElement = document.createElement('a');
+newAnchorElement.href = 'https://google.com'
+newAnchorElement.textContent = "This leads to Google"
+
+// 2. DOM에서 부모 요소 찾기
+let firstParagraph = document.querySelector('p');
+
+// 3. 부모 요소 컨텐츠에 새로운 요소 삽입 (append/ appendChild)or(insert)
+firstParagraph.append(newAnchorElement);
+
+// <remove element>
+// 1. 뺴야 할 요소를 선택
+let firstH1Element = document.querySelector('h1');
+
+// 2. 요소 삭제
+//firstH1Element.remove();
+firstH1Element.parentElement.removeChild(firstH1Element); // 옛날 브라우저용
+
+
+// <요소 이동>
+firstParagraph.parentElement.append(firstParagraph); // 부모 요소를 선택한 다음에 append 또는 insert를 사용하여 해당 위치로 옮겨준다.
+// = firstParagraph.parentElement.insertBefore.append(firstParagraph);
+
+// <innerHtml>
+// textContent는 모는 텍스트 내용으로 접근할 수 있음, innerHtml은 모든 html 내용으로 접근할 수 있음
+firstParagraph.innerHTML = 'Hi This is <strong>important</strong>';
+
+
+
+
+// DOM이란? 자바스크립트를 통해 쿼리하거나 조작할 수 있는 파싱된 HTML 및 CSS 콘텐츠의 표현이다.
+// DOM이 존재하는 이유? DOM을 통해 자바스크립트 코드는 화면에 표시되는 내용을 쿼리, 읽기 또는 조작할 수 있다.
+//                  이를 통해 대화형 웹사이트를 구축할 수 있다.
+// DOM 드릴링이란? DOM 객체의 속성(ex. firstElementChild)을 통해 DOM을 탐색하는 작업
+// 텍스트 노드와 HTML 요소 객체의 차이점은 "텍스트 노드는 HTML 요소 객체(중첩 요소 포함)의 텍스트 콘텐츠일 뿐입니다."
+// Q. innerHTML을 사용할 수 있다면 왜 새 요소를 만들기 위해 {document.createElement()}를 사용하나요?
+// A. {document.reateElement()}를 사용하면 생성된 요소에 직접 액세스할 수 있습니다. 해당 액세스를 사용하여 속성 및 메서드를 통해 요소를 구성할 수 있습니다.(ex. 이벤트 리스너 추가)
+
