@@ -8,6 +8,10 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
+// 9. ejs
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 // 7. 특수 미들웨어 등록(css, js 파일에 대한 요청/ 프로젝트 폴더의 일부 폴더 안에 해당 파일을 전달할 수 있는지 확인하는 모든 수신 요청에 대해 실행)
 app.use(express.static('public'));
 // 사용자가 접근할 수 있는 폴더 public를 정해준다.
@@ -17,16 +21,24 @@ app.use(express.static('public'));
 // 8. name 속성으로 input에 입력된 데이터 추출하기 위헤 설정
 app.use(express.urlencoded({extended: false}));
 
+
+
 // 3. 유용한 서버를 사용하려면 도메인 이상의 경로가 필요함, get은 '/'만 해줘도 됨.
 app.get('/', function(req, res) {
   //res.send('<h1>Hello World!</h1>');
-  const htmlFilePath = path.join(__dirname, 'views', 'index.html');
-  res.send(htmlFilePath);
+  
+  //const htmlFilePath = path.join(__dirname, 'views', 'index.html');
+  //res.send(htmlFilePath);
+
+  // ejs 파일 렌더링
+  res.render('index'); // 파일 확장면 생략가능
 });
 
 app.get('/recommend', function(req, res) {
-  const htmlFilePath = path.join(__dirname, 'views', 'recommend.html');
-  res.send(htmlFilePath);
+  // const htmlFilePath = path.join(__dirname, 'views', 'recommend.html');
+  //res.send(htmlFilePath);
+
+  res.render('recommend');
 });
 
 // 8. post 요청의 경우에는 get 경로가 활성화되지 않기 때문에 사용 가능하다.
@@ -47,22 +59,35 @@ app.post('/recommend', function(req, res) {
 });
 
 app.get('/confirm', function(req, res) {
-  const htmlFilePath = path.join(__dirname, 'views', 'confirm.html');
-  res.send(htmlFilePath);
+  //const htmlFilePath = path.join(__dirname, 'views', 'confirm.html');
+  //res.send(htmlFilePath);
+
+  res.render('confirm');
 });
 
 app.get('/about', function(req, res) {
-  const htmlFilePath = path.join(__dirname, 'views', 'about.html');
-  res.send(htmlFilePath);
+  //const htmlFilePath = path.join(__dirname, 'views', 'about.html');
+  //res.send(htmlFilePath);
+  
+  res.render('about');
 });
 
 // 4. html 파일을 응답으로
 app.get('/restaurants', function(req, res) {
   // 5-2
-  const htmlFilePath = path.join(__dirname, 'views', 'restaurants.html');
+  //const htmlFilePath = path.join(__dirname, 'views', 'restaurants.html');
 
-  res.sendFile(htmlFilePath); 
+  const filePath = path.join(__dirname, 'data', 'restaurants.json');
+
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+
+  //res.sendFile(htmlFilePath); 
   // sendFile: 프로젝트 폴더를 자동적으로 스캔하지 않음. 5번으로 가서 설정
+  res.render('restaurants', { 
+    numberOfRestaurants: storedRestaurants.length,
+    restaurant: storedRestaurants // 레스트랑 말고 다른 값이면 다시 포멧ㄴ
+  });
 });
 
 
