@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./img/workplace.jpg" alt="업무공간" usemap="#workmap">
+
+    <map name="workmap">
+        <area shape="rect" coords="32, 42, 270, 348" alt="컴퓨터" href="./01_welcome.html">
+        <area shape="circle" coords="340, 300, 40" alt="커피" href="./02_Heding.html" target="_blank">
+        <area shape="poly" coords="290, 170, 330, 175, 345, 245, 295, 250" alt="" href="./03_style.html">
+    </map>
+
+    <img src="./img/workplace.jpg" alt="업무공간" usemap="#workmap02">
+    <map name="workmap02">
+        <area shape="circle" coords="340, 300, 40" alt="커피" onclick="myFunction()" style="cursor: pointer;">
+    </map> 
+    
+    <script>
+        function myFunction() {
+            alert('유후~~~~~');
+        }
+    </script>
+</body>
+</html>

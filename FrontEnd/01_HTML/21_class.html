@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+    <style>
+        .city { background-color: tomato; color: white; border: 2px solid black; margin: 20px; padding: 20px; }
+        .note { font-size: 120%; color: red; }
+        .test { display: none;} 
+    </style>
+</head>
+<body>
+    <button>요소 숨기기</button>
+    <button>요소 표시하기</button>
+    <div class="city">
+        <h2>London</h2>
+        <p>런던은 <sapn class="country">영국</sapn>의 수도입니다.</p>
+    </div>
+    <div class="city">
+        <h2>Paris</h2>
+        <p>파리는 <sapn class="country">프랑스</sapn>의 수도입니다.</p>
+    </div>
+    <div class="city">
+        <h2>Tokyo</h2>
+        <p>도쿄는 <sapn class="country">일본</sapn>의 수도입니다.</p>
+    </div>
+
+    <script>
+        const btn = document.getElementsByTagName("button");
+        const x = document.querySelectorAll('.city');
+        /*
+        function hideElements() {
+            let x = document.querySelectorAll('.city');
+            for(let i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+        }
+        */
+
+        btn[0].addEventListener('click', () => {
+            for(let i = 0; i < x.length; i++)
+                x[i].classList.toggle('test');
+        })
+    </script>
+</body>
+</html>
