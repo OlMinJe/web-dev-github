@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Layout</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        header,
+        footer {
+            background-color: gray;
+            color: white;
+            padding: 15px;
+        }
+
+        section { overflow: auto; }
+
+        nav {
+            float: left;
+            width: 25%;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            padding: 8px;
+            margin-bottom: 8px;
+            background-color: #33bbee;
+            color: white;
+            cursor: pointer;
+        }
+        nav li:hover { background-color: #0099cc; }
+
+        article {
+            float: right;
+            width: 75%;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Korea</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li>The Filght</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </nav>
+        <article>
+            <h1>City</h1>
+            <p>어디 이것은 사람은 뛰노는 든 있을 실현에 위하여서. 천하를 쓸쓸한 미묘한 같이 인간이 있음으로써 뿐이다. 튼튼하며, 전인 사랑의 없는 위하여서 것이다. </p>
+            <p>같지 천지는 미묘한 이상을 풀이 얼음에 반짝이는 바로 운다. 불어 불러 청춘이 있음으로써 황금시대다. 가슴이 인간에 미묘한 청춘에서만 있으며, 때에, 같으며, 대한 피다. 투명하되 더운지라 만물은 보이는 살 철환하였는가? 보이는 심장은 얼마나 피가 유소년에게서 크고 말이다. 황금시대를 끝까지 그들의 황금시대다.</p>
+        </article>
+    </section>
+    <footer>
+        <p>바닥글 내용</p>
+    </footer>
+</body>
+</html>

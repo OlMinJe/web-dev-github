@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>출력</title>
+</head>
+<body>
+    <button type="button" onclick="showText()">버튼</button>
+    <p id="demo">여기에 결과가 나옵니다</p>
+
+    <hr>
+    <button type="button" onclick="documentWrite()">화면 출력</button>
+
+    <hr>
+    <button type="button" onclick="showAlert()">경로창 출력</button>
+
+    <hr>
+    <button type="button" onclick="displayConsole()">콘솔창 출력</button>
+
+    <hr>
+    <button tyoe="button" onclick="window.print()">인쇄</button>
+
+    <script>
+        function showText() {
+            let demo = document.getElementById("demo");
+            demo.innerHTML = "환영합니다.";
+        }
+        
+        function documentWrite() {
+            document.write("<h2>화면에 출력</h2>"); // 기존 HTML이 다 사라진다.
+        }
+
+        function showAlert() {
+            window.alert("확인을 누르지 않으면 다음으로 진행할 수 없다.");
+        }
+
+        function displayConsole() {
+            console.log("테스트용갈희 입니다.");
+        }
+    </script>
+</body>
+</html>

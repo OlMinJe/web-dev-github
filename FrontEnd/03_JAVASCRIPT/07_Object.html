@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개체</title>
+</head>
+<body>
+    <script>
+        // 객체에는 let 보다는 const를 사용하는 것이 보편적이다.
+        //const person = { name: "유재석", age: 40, eyeColor: "흑갈색" };
+        //person = { name: "정준하" }; // 이러면 오류 뜹니다.
+        
+        // 객체 생성 방법[1]
+        const person = { 
+            name: "유재석", 
+            age: 40, 
+            eyeColor: "흑갈색",
+            info: function() {
+                return this.name + "(" + this.age + ")";
+            }
+        };
+
+        // 객체 생성 방법[2]
+        const person2 = {};
+        person2.name = "정준하";
+        person2.age = 53;
+        person2.nic = "쩌리";
+        person2.info = function() {
+            return this.name + "(" + this.age + ")";
+        };
+
+        // new 키워드로 객체 생성하기
+        const person3 = new Object();
+        person3.name = "박명수";
+        person3.age = 60;
+        person3.info = function() {
+            return this.name + "(" + this.age + ")";
+        };
+
+        // 중첩객체
+        const person4 = { 
+            name: "유재석", 
+            age: 40, 
+            eyeColor: "흑갈색",
+            profile: {
+                first: "무한도전",
+                second: "유퀴즈 온더 블록"
+            },
+            info: function() {
+                return this.name + "(" + this.age + ")";
+            }
+        };
+        /* 사용방법
+        person4.profile.first;
+        또는
+        let x = "profile";
+        let y = "first";
+        person[x][y];
+        /**/
+
+        // 중첩 배열 및 객체
+        const person5 = {
+            name: "정형돈",
+            age: 45,
+            cars: [
+                { name: "포드", model: ["피에스타", "포쿠스", "무스탕"] },
+                { name: "BMW", model: ["320", "X3", "X5"] },
+                { name: "피아트", model: ["500", "Panda"] }
+            ]
+        };
+    </script>
+</body>
+</html> 

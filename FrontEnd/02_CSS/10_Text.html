@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+
+    <style>
+        h1 { text-align: center; }
+        h2 { text-align: left; }
+        h3 { text-align: right; }
+        div { 
+            border: 1px solid black; 
+            padding: 10px; 
+            width: 300px; 
+            height: 200px;
+            text-align: justify;
+        }
+        p.a { text-align-last: left; }
+        p.b { text-align-last: center; }
+        p.c { text-align-last: right; }
+
+        p.ex1 { 
+            direction: rtl; /* 문단을 오른쪽에서 왼쪽으로 */
+            unicode-bidi: bidi-override; /* 텍스트를 오른쪽에서 왼쪽으로 적은 것처럼 출력해준다. */
+        }
+
+        img { border: 1px dotted red; width: 1%; height: 1%; }
+        img.a { vertical-align: baseline; }
+        img.b { vertical-align: text-top; }
+        img.c { vertical-align: text-bottom; }
+        img.d { vertical-align: sub; }
+        img.e { vertical-align: super; }
+    </style>
+</head>
+<body>
+    <h1>Heading 1 (center)</h1>
+    <h2>Heading 2 (left)</h2>
+    <h3>Heading 3 (right)</h3>
+    <p>위 세 머리글은 가운데, 왼쪽 및 오른쪽으로 정렬됩니다.</p>
+
+    <hr>
+    <h1>text-align: justify 예제</h1>
+    <p>text-align: justify은 각 줄이 동일한 너비를 갖도록 줄을 늘린다. (신문 또는 잡치처럼)</p>
+    <div>
+        까닭이요, 덮어 밤이 까닭입니다. 이름을 노새, 나의 이름과, 않은 멀리 봅니다. 
+        하나에 쓸쓸함과 나는 이런 묻힌 있습니다. 비둘기, 묻힌 가슴속에 밤이 때 봅니다. 
+        책상을 보고, 하나에 지나가는 멀리 밤을 까닭입니다. 가득 너무나 이름자 별 봅니다. 
+        내린 지나가는 내 하나에 봅니다. 걱정도 이런 오면 까닭이요, 그리고 벌레는 별이 버리었습니다. 
+        프랑시스 가을로 가난한 듯합니다. 당신은 무엇인지 소학교 계십니다.
+    </div>
+
+    <hr>
+    <h1>text-align-last 속성</h1>
+    <h2>text-align-last: left</h2>
+    <p class="a">
+        쓸쓸한 가치를 가슴에 바이며, 착목한는 공자는 것은 봄바람이다. 
+        맺어, 어디 꽃이 가장 황금시대다. 만물은 더운지라 가진 힘있다. 
+        가슴이 대고, 속잎나고, 황금시대다. 우리의 청춘의 위하여 속잎나고, 할지라도 장식하는 피다.
+    </p>
+    <h2>text-align-last: center</h2>
+    <p class="b">
+        쓸쓸한 가치를 가슴에 바이며, 착목한는 공자는 것은 봄바람이다. 
+        맺어, 어디 꽃이 가장 황금시대다. 만물은 더운지라 가진 힘있다. 
+        가슴이 대고, 속잎나고, 황금시대다. 우리의 청춘의 위하여 속잎나고, 할지라도 장식하는 피다.
+    </p>
+    <h2>text-align-last: right</h2>
+    <p class="c">
+        쓸쓸한 가치를 가슴에 바이며, 착목한는 공자는 것은 봄바람이다. 
+        맺어, 어디 꽃이 가장 황금시대다. 만물은 더운지라 가진 힘있다. 
+        가슴이 대고, 속잎나고, 황금시대다. 우리의 청춘의 위하여 속잎나고, 할지라도 장식하는 피다.
+    </p>
+
+    <hr>
+    <p>이것은 기본 텍스트 방향 입니다.</p>
+    <p class="ex1">이것은 오른쪽에서 왼쪽 텍스트 방향입니다.</p>
+
+    <hr>
+    <h1>vertical-align 속성</h1>
+    <h2>vertical-align: baseline(default)</h2>
+    <p>An <img class="a" src="./img/smiley.gif" alt="img">image with a default alignment</p>
+    
+    <h2>vertical-align: text-top</h2>
+    <p>An <img class="b" src="./img/smiley.gif" alt="img">image with a text-top</p>
+    
+    <h2>vertical-align: text-bottom</h2>
+    <p>An <img class="c" src="./img/smiley.gif" alt="img">image with a text-bottom</p>
+
+    <h2>vertical-align: sub</h2>
+    <p>An <img class="d" src="./img/smiley.gif" alt="img">image with a sub alignment</p>
+
+    <h2>vertical-align: sup</h2>
+    <p>An <img class="d" src="./img/smiley.gif" alt="img">image with a sup alignment</p>
+</body>
+</body>
+</html>
