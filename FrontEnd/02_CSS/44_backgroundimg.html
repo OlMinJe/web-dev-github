@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <mㄴeta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <style>
+        #exam1 {
+            padding: 40px;
+            background-image: url(./img/img_flwr.gif), url(./img/paper.gif);
+            background-repeat: no-repeat, repeat;
+            background-position: right bottom; /* 첫번째 이미지에만 적용되었다. */
+            background-size: 130px auto;
+            background-origin: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiple Background</h1>
+    <p>다음 div 요소에는 두 개의 배경 이미지가 있습니다.</p>
+    <div id="exam1">
+        <h1>두 개의 배경</h1>
+        <p>두 개의 문단</p>
+    </div>
+</body>
+</html>

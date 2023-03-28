@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterable</title>
+</head>
+<body>
+    <h2>Iterable</h2>
+    <pre style="font-family: Consolas;">
+
+    </pre>
+    <script>
+        function iterableString(str) {
+            for(let x of str) {
+                console.log(x);
+            }
+        }
+
+    </script>
+
+    <hr>
+    <h2>Iterable</h2>
+    <pre>
+        function Numbers() {
+            let n = 0;
+            return {
+                next: function() {
+                    n += 10;
+                    return {
+                        value: n,
+                        done: false
+                    };
+                }
+            };
+        }
+    </pre>
+    <script>
+        Numbers = {};
+        Numbers[Symbol.iterator] = function() {
+            let n = 0;
+            return {
+                next: function() {
+                    n += 10;
+                    if(n == 100) {
+                        done = true;
+                    }
+                    return {
+                        value: n,
+                        done: false
+                    };
+                }
+            };
+        } // 이러면 무한 반복
+    </script>
+</body>
+</html>

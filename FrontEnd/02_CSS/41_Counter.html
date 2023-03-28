@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운터</title>
+    <style>
+        body { counter-reset: section; }
+        h1 { counter-reset: subSection; }
+        h1::before { content: "Section " counter(section) ": "; counter-increment: section; }
+        h2::before { content: counter(section) "-" counter(subSection) ": "; counter-increment: subSection; }
+    </style>
+</head>
+<body>
+    <h1>HTML/CSS Tutorial</h1>
+    <h2>HTML</h2>
+    <h2>CSS</h2>
+    <h2>Bootstrap</h2>
+    <h2>W3.css</h2>
+
+    <h1>Script Tutorial</h1>
+    <h2>JavaScript</h2>
+    <h2>Jquery</h2>
+    <h2>React</h2>
+
+    <h1>Programing Tutorial</h1>
+    <h2>Phython</h2>
+    <h2>Jquery</h2>
+    <h2>React</h2>
+
+    <hr>
+    <style>
+        ol { 
+            list-style: none; 
+            counter-reset: listNumber;
+        }
+        li::before {
+            counter-increment: listNumber;
+            content: counters(listNumber, ".") " ";
+        }
+        
+    </style>
+    <ol> <!-- listNumber 0 -->
+        <li>item</li> <!-- 1 -->
+        <li> <!-- 2 -->
+            item
+            <ol> <!-- 2 / 0 -->
+                <li>item</li> <!-- 2 / 1 -->
+                <li>item</li> <!-- 2 / 2 -->
+                <li>item <!-- 2 / 3 -->
+                    <ol> <!-- 2 / 3 / 0 -->
+                        <li>item</li> <!-- 2 / 3 / 1 -->
+                        <li>item</li> <!-- 2 / 3 / 2 -->
+                        <li>item</li> <!-- 2 / 3 / 3 -->
+                    </ol>
+                </li>
+                <li>item</li> <!-- 2 / 3 -->
+            </ol>
+            <li>item</li> 
+        </li>
+        <li>item</li>
+    </ol>
+</body>
+</html>
