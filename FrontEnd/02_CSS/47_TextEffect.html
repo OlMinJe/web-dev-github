@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Effect</title>
+    <style>
+        p { width: 200px; border: 1px solid red; }
+        p.test1,
+        p.test2 {
+            white-space: nowrap; overflow: hidden;
+        }
+        p.test1:hover,
+        p.test2:hover { 
+            overflow: visible;
+        }
+        p.test1 { text-overflow: clip; } /* overflow 잘린다. */
+        p.test2 { text-overflow: ellipsis; } /* 줄임표(...)로 표시된다. */
+
+        p.test3 { word-wrap: normal; }
+        p.test4 { word-wrap: break-word; }
+
+        p.test5 { writing-mode: horizontal-tb; }
+        p.test6 { writing-mode: vertical-rl; }
+        p.test7 { writing-mode: vertical-lr; }
+        p.test8 { writing-mode: sideways-lr; }
+        p.test9 { writing-mode: sideways-rl;}
+    </style>
+</head>
+<body>
+    <h1>Text Effect</h1>
+    <h2>text-overflow</h2>
+    <h3>text-overflow: clip;</h3>
+    <p class="test1">일월과 구할 그것을 남는 찾아다녀도, 같으며, 착목한는 봄바람이다.</p>
+    <h3>text-overflow: ellipsis;</h3>
+    <p class="test2">일월과 구할 그것을 남는 찾아다녀도, 같으며, 착목한는 봄바람이다.</p>
+    <hr>
+    <h2>word-wrap 속성</h2>
+    <h3>word-wrap: normal(defalut)</h3>
+    <p class="test3">일월과 구할 그것을 남는 wordWrapTestwordWrapTestttt, 같으며, 착목한는 봄바람이다.</p>
+    <h3>word-wrap: break-word</h3>
+    <p class="test4">일월과 구할 그것을 남는 wordWrapTestwordWrapTestttt, 같으며, 착목한는 봄바람이다.</p>
+
+    <hr>
+    <h2>Writing-mode 속성</h2>
+    <p class="test5">일월과 구할 그것을 남는 찾아다녀도, 같으며, 착목한는 봄바람이다.</p>
+    <p class="test6">일월과 구할 그것을 남는 찾아다녀도, 같으며, 착목한는 봄바람이다.</p>
+    <p class="test7">일월과 구할 그것을 남는 찾아다녀도, 같으며, 착목한는 봄바람이다.</p>
+    <p class="test8">일월과 구할 그것을 남는 찾아다녀도, 같으며, 착목한는 봄바람이다.</p>
+    <p class="test9">일월과 구할 그것을 남는 찾아다녀도, 같으며, 착목한는 봄바람이다.</p>
+</body>
+</html>

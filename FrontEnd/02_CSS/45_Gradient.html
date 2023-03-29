@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient</title>
+    <style>
+        div { height: 200px; }
+        #grad1 { 
+            background-color: red; /* 그라디언트가 지원되지 않을 경우 대체색 */
+            background-image: linear-gradient(red, yellow);
+        }
+        #grad2 {
+            background-color: red;
+            background-image: linear-gradient(to right, red, yellow);
+        }
+        #grad3 {
+            background-color: red;
+            background-image: linear-gradient(to Bottom right, red, yellow);
+        }
+        #grad4 {
+            background-color: red;
+            background-image: linear-gradient(45deg, red, yellow);
+        }
+        #grad5 {
+            background-color: red;
+            background-image: linear-gradient(red, yellow, green);
+        }
+        #grad6 {
+            background-color: red;
+            background-image: linear-gradient(90deg, red 30%, yellow 40%, green);
+        }
+        #grad7 {
+            background-color: red;
+            background-image: repeating-linear-gradient(90deg, red, yellow 10%, red 20%);
+        }
+        #grad8 {
+            background-color: red;
+            background-image: radial-gradient(red, yellow, green);
+        }
+        #grad9 {
+            background-color: red;
+            background-image: radial-gradient(circle, red, yellow, green);
+        }
+        #grad10 {
+            background-color: red;
+            background-image: radial-gradient(circle at 50% 100%, red, yellow, green);
+        }
+        #grad11 {
+            background-color: red;
+            background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+        }
+        #grad12 {
+            background-color: red;
+            background-image: conic-gradient(red, yellow, green);
+        }
+        #grad13 {
+            width: 200px;
+            border-radius: 50%;
+            background-color: red;
+            background-image: conic-gradient(red 45deg, yellow, green);
+        }
+        #grad14 {
+            width: 200px;
+            border-radius: 50%;
+            background-color: red;
+            background-image: conic-gradient(from 90deg, red, yellow, green);
+        }
+        #grad15 {
+            width: 200px;
+            border-radius: 50%;
+            background-color: red;
+            background-image: conic-gradient(at 60% 40%, red, yellow, green);
+        }
+    </style>
+</head>
+<body>
+    <h1>그라디언트</h1>
+    <h2>Linear Gradient = Top to Bottom</h2>
+    <div id="grad1"></div>
+
+    <hr>
+    <h2>Linear Gradient = left to right</h2>
+    <div id="grad2"></div>
+
+    <hr>
+    <h2>Linear Gradient - 대각선</h2>
+    <div id="grad3"></div>
+
+    <hr>
+    <h2>Linear Gradient - 각도</h2>
+    <div id="grad4">위쪽을 0deg, 시계방향이 양의 방향이다.</div>
+
+    <hr>
+    <h2>Linear Gradient - 여러 색상 정지점 사용</h2>
+    <div id="grad5"></div>
+
+    <hr>
+    <h2>Linear Gradient - 정지점 위치 지정</h2>
+    <div id="grad6"></div>
+
+    <hr>
+    <h2>Linear Gradient - 반복 그라디언트</h2>
+    <div id="grad7"></div>
+
+    <hr>
+    <h2>Radial Gradient - 균일한 간격의 색상 정지점</h2>
+    <div id="grad8">defalut: 모양-타원, 크기-가장 먼 코너, 위치-중앙</div>
+
+    <hr>
+    <h2>Radial Gradient - 모양</h2>
+    <div id="grad9">모양-ellipse(defalut), circle</div>
+
+    <hr>
+    <h2>Linear Gradient - 중심 위치</h2>
+    <div id="grad10">중심위치 at 키워드 다음 가로 세로 위치를 %로 표시</div>
+    
+    <hr>
+    <h2>Linear Gradient - 중심</h2>
+    <div id="grad11">크기 closest-size, farthest-sidem colsest-corner, farthest-corner(defalut)</div>
+
+    <hr>
+    <h2>Conic Gradient 기본형</h2>
+    <div id="grad12">defalut: angle-0deg, position-center</div>
+
+    <hr>
+    <h2>Conic Gradient - 색상에 각도 적용</h2>
+    <div id="grad13"></div>
+
+    <hr>
+    <h2>Conic Gradient - 시작 각도 적용</h2>
+    <div id="grad14">from 90deg</div>
+
+    <hr>
+    <h2>Conic Gradient - 중심 위치</h2>
+    <div id="grad15">at 가로위치% 세로위치%</div>
+</body>
+</html>
