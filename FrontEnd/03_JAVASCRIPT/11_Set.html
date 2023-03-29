@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET</title>
+    <style>
+        pre { font-family: consolas; }
+    </style>
+</head>
+<body>
+    <h1>Set</h1>
+    <h2>new Set()</h2>
+    <h3>배열로 set 만들기</h3>
+
+    <pre>
+    <code>
+    const array = ["a", "b", "c"];
+    const letters = new Set(["a", "b", "c"]);
+    </code>
+    </pre>
+
+    <script>
+        const array = ["a", "b", "c"];
+        const letters = new Set(["a", "b", "c"]);
+        console.log("초기 letters");
+        console.log(letters);
+    </script>
+    <pre>
+    <code>  
+    // set() 메서드를 이용하여 생성하기
+    const letters2 = new Set();
+    // 사이즈가 0인 상태에서
+
+    letters2.add("a");
+    const char = "b";
+    letters2.add(char);
+    letters2.add("c");
+    </code>
+    </pre>
+    <script>
+        const letters2 = new Set();
+        // 사이즈가 0인 상태에서
+
+        letters2.add("a");
+        const char = "b";
+        letters2.add(char);
+        letters2.add("c");
+    </script>
+
+    <hr>
+    <h3>중복 요소 추가</h3>
+    <pre>
+    <code>  
+    letters.add("d");
+    letters.add("c");
+    letters.add("e");
+    </code>
+    </pre>
+
+    <script>
+        letters.add("d");
+        letters.add("c");
+        letters.add("e");
+        console.log("추가 이후 letters");
+        console.log(letters);
+    </script>
+
+    <hr>
+    <h3>forEach()</h3>
+    <pre>
+    letters.forEach();
+    </pre>
+    <script>
+        letters.forEach((setElement) => console.log(setElement));
+    </script>
+
+    <hr>
+    <h3>values()</h3>
+    <pre>
+    const iterator = letters.values();
+    </pre>
+    <script>
+        const iterator = letters.values();
+    </script>
+
+    <hr>
+    <h3>keys()</h3>
+    <pre>
+    const iterator2 = letters.keys();
+    </pre>
+    <script>
+        const iterator2 = letters.keys();
+    </script>
+
+    <hr>
+    <h3>entry()</h3>
+    <pre>
+    const iterator3 = letters.entries();
+    </pre>
+    <script>
+        const iterator3 = letters.entries();
+    </script>
+</body>
+</html>
