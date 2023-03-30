@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Tip Text</title>
+    <style>
+        .tooltip {
+            text-align: center;
+            position: relative;
+        }
+        .tooltipText {
+            position: absolute;
+            z-index: 1;
+            visibility: hidden;
+            width: 200px;
+            padding: 5px;
+            border-radius: 6px;
+            background-color: black;
+            color: white;
+            top: 40px;
+            left: 41%;
+        }
+        .tooltipText::after {
+            content: "";
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent black transparent;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            margin-left: -25%;
+        }
+        .tooltip:hover .tooltipText {
+            visibility: visible;
+        }
+        #arrow {
+            display: table;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent red transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tool Tip Text</h1>
+    <div class="tooltip">
+        마우스를 올리세요
+        <span class="tooltipText">Tooltip Text</span>
+    </div>
+
+    <div id="arrow">
+
+    </div>
+</body>
+</html>
