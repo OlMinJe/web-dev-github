@@ -14,10 +14,26 @@
     <pre>
     let text = "Apple, Banana, Kiwi";
     let text2 = 'Please visit Microsoft!
+    let text5 = "간장 공장 공장장은 간공장장인가 장공장장인가?";
     </pre>
+
+    <button onclick="findFactory()">공장을 찾아라</button>
     <script>
         let text = "Apple, Banana, Kiwi";
         let text2 = 'Please visit Microsoft!'
+        let text5 = "간장 공장 공장장은 간공장장인가 장공장장인가?";
+
+        function findFactory() {
+            let pos = 0;
+
+            while(true) {
+                pos = text5.indexOf("공장", pos + "공장".length);
+
+                if(pos == -1) break;
+
+                console.log(pos);
+            }
+        }
     </script>
 </body>
 </html>

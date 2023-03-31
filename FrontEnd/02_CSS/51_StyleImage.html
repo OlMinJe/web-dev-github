@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Image</title>
+    <style>
+        * { box-sizing: border-box; }
+        .container { position: relative; width: calc(33.33% - 10px); height: auto; float: left; padding: 5px; }
+        .container img { display: block; width: 100%; height: auto; }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: white;
+        }
+
+        #over2 { opacity: 0.3; }
+        #nameBox { background-color: #4455aa; padding: 16px; }
+        #over2:hover #nameBox { opacity: 1; }
+    </style>
+</head>
+<body>
+    <h1>Style Image</h1>
+    <h2>Fade in Overaly</h2>
+    <div class="container">
+        <img src="./img/img_avatar.png" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text" id="nameBox">Hello World</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="./img/img_avatar.png" alt="Avatar" class="image">
+        <div class="overlay" id="over2">
+          <div class="text">Hello World</div>
+        </div>
+    </div>
+</body>
+</html>
