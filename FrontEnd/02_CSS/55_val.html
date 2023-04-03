@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var()</title>
+    <style>
+        :root {
+            --blue: #1199ff;
+            --white: #ffffff;
+        }
+        body { background-color: var(--blue); }
+        h2 { border-bottom: 2px solid var(--blue); }
+        article { background-color: var(--white); color: var(--blue); padding: 15px; }
+        button { background-color: var(--white); color: var(--blue); border: 1px solid var(--blue); padding: 5px;}
+    </style>
+</head>
+<body>
+    <h1>Val()</h1>
+    <article>
+        <h2>제목</h2>
+        <p>문단</p>
+        <p>문단</p>
+        <p>
+            <button onclick="getVar()">JAVASCRIPT용 변수 불러오기</button>
+            <button onclick="setVae()">JAVASCRIPT로 변수 설정하기</button>
+        </p>
+    </article>
+
+    <script>
+        let r = document.querySelector(":root");
+
+        function getVar() {
+            let rs = getComputedStyle(r);
+            alert('--blue 변수 값: ${rs.getPropertyValue("--blue")}');
+        }
+
+        function setVar() {
+            r.style.setProperty('--blue', 'lightblue');
+        }
+    </script>
+</body>
+</html>
