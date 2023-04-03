@@ -87,5 +87,34 @@
             }
         }
     </script>
+
+    <pre>
+    const points = [40, 100, 1, 5, 25, 10];
+    </pre>
+    <p id="test4"></p>
+    <p>
+        <button onclick="maxInArray();">최대값</button>
+        <button onclick="minInArray();">최소값</button>
+    </p>
+    <script>
+        const test4 = document.getElementById("test4");
+
+        function maxInArray() {
+            let max = Math.max.apply(null, points);
+            test4.innerHTML = `최대값: ${max}`;
+        }
+
+        function minInArray() {
+            let min = Math.min.apply(null, points);
+            test4.innerHTML = `최소값: ${min}`;
+        }
+
+        // 기존 최대값 찾는 방식
+        let max = points[0];
+        for(let i = 1; i < points.length; i++) {
+            if(max < points[i]) max = points[i];
+        }
+        console.log(max);
+    </script>
 </body>
 </html>
