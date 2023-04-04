@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayIteration</title>
+</head>
+<body>
+    <h1>Array Iteration</h1>
+    <p>const numbers = [45, 4, 9, 16, 25];</p>
+    <p>배열 출력: <span id="result1"></span></p>
+    <p>
+        <button type="button" onclick="printNumbers()">배열 출력</button>
+        <button type="button" onclick="addTen()">각 원소에 10씩 더하기</button>
+    </p>
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+
+        function printNumbers() {
+            let txt = "";
+            numbers.forEach((value) => txt += `${value}, `);
+            document.getElementById("result1").innerHTML = txt;
+        }
+
+        function addTen() {
+            numbers.forEach((value, index, numbers) => {
+                numbers[index] = value + 10;
+            });
+        }
+    </script>
+
+    <hr>
+    <p>const numbers = [45, 4, 9, 16, 25];</p>
+    <p>new Array 배열 출력: <span id="result2"></span></p>
+    <p>
+        <button type="button" onclick="doubleElement()">각 원소에 곱하기 2 한 후 새 배열 만들기</button>
+    </p>
+    <script>
+        const newArray = [];
+
+        function doubleElement() {
+            newArray = numbers.map((value, index, numbers) => value * 2);
+            document.getElementById("result2").innerHTML = newArray;
+        }
+    </script>
+
+    <hr>
+    <p>const numbers = [45, 4, 9, 16, 25];</p>
+    <p>new Array 배열 출력: <span id="result3"></span></p>
+    <p>
+        <button type="button" onclick="filterValue()">18이상의 숫자가 담긴 배열 만들기</button>
+    </p>
+    <script>
+        const newArray2 = [];
+
+        function filterValue() {
+            newArray2 = numbers.filter((value, index, numbers) => value >= 18);
+            document.getElementById("result3").innerHTML = newArray2;
+        }
+    </script>
+</body>
+</html>
