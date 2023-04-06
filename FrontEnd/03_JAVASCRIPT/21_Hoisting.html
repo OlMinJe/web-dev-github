@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <button id="btn1">click</button>
+    <p id="demo1"></p>
+
+    <button id="btn2">click</button>
+    <p id="demo2"></p>
+
+    <script>
+        /* let은 변수를 먼저 선언하고 사용해야 한다.
+        let x = 5;
+        console.log(x);
+        /**/
+
+        /* 인터프리터 언어의 특징 -> 한 줄 한 줄 실행한다.
+        test();
+
+        function test() {
+            console.log("Test");
+        }
+        /**/
+        
+        /* 함수를 변수에 할당하면, 변수를 함수처럼 사용할 수 있다.
+        let test02 = () => {
+            console.log("test2");
+        }
+
+        test02(); // ()괄호를 붙여야 바로 실행된다. -> 함수 특징
+        /**/
+
+        /*
+        const obj = {};
+        Object.defineProperty(obj, "x", {value: 0, writable: false});
+        obj.x = 10;
+        console.log(obj);
+        /**/
+
+        /*
+        function x(p1, p2) {
+            console.log(p1);
+            console.log(p2);
+        }
+        x(10, 20);
+        delete x;
+        x(30, 40);
+        /**/
+
+        //*
+        const obj01 = {
+            member: 10,
+            get memb() {
+                return this.member;
+            },
+            set memb(member) {
+                this.member = member
+            }
+        }
+        console.log(obj01.member);
+        console.log(obj01.memb);
+
+        obj01.memb = 20;
+        console.log(obj01.memb);
+
+        obj01.memb = 30;
+        console.log(obj01.memb);  
+        /**/
+        
+        let result1 = () => document.getElementById("demo1").innerHTML += this;
+        window.addEventListener("load", result1);
+        document.getElementById("btn1").addEventListener("click", result1);
+
+        let result2 = () => document.getElementById("demo2").innerHTML += this;
+        window.addEventListener("load", result2);
+        document.getElementById("btn2").addEventListener("click", result2);
+    </script>
+</body>
+</html>

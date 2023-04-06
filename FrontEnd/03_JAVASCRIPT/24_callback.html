@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+    <script>
+        function first() {
+            displayer("Hello");
+        }
+
+        function second() {
+            displayer("GoodBye");
+        }
+
+        function displayer(message) {
+            console.log(message);
+        }
+
+        first();
+        second();
+
+        function myCalculator(num1, num2, myCallback) {
+            let sum = num1 + num2;
+            myCallback(sum);
+        }
+
+        myCalculator(5, 5, myDisplayer); // 이때 사용되는 함수를 콜백함수라고 한다.
+
+        function showAlert(message) {
+            alert(message);
+        }
+
+        //
+        const numbers = [4, 1, -20, -7, 5, 9, -6];
+        function removeNeg(numbers, callback) {
+            const array = [];
+            for(x of numbers) {
+                if(callback(x)) {
+                    array.puch(x);
+                }
+            }
+            return array;
+        }
+
+        const posNumbers = removeNeg(numbers, x => x > 0); // 리턴이 있는걸 주의해서 사용해야 한다.
+        console.log(posNumbers.toString());
+</script>
+</body>
+</html>

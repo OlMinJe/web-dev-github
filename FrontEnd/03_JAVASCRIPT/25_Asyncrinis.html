@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynconos</title>
+</head>
+<body>
+    <h1 id="result1"></h1>
+    <button id="stop" onclick="clearTimeout(timerID)">멈춤</button>
+
+    <script>
+        setTimeout(function() {
+            console.log("I love you");
+        }, 3000);
+
+        console.log("I Need You");
+
+        function showTime() {
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            document.getElementById("result1").innerHTML = `${hours}:${minutes}:${seconds}`
+        }
+        
+        let timerID = setInterval(showTime, 1000);
+    </script>
+</body>
+</html>
