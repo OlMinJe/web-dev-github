@@ -195,8 +195,7 @@
             setpTimerWatch(tSetHours.value, tSetMinutes.value, tSetSeconds.value);
             //tTimer = new Date(`1970-01-01T${timer.value}`);
 
-            btnTimerStart.setAttribute("disabled", "disabled");
-            btnTimerStop.setAttribute("disabled", "disabled");
+            btnTimerStart.removeAttribute("disabled");
         }
 
         function timerStart() {
@@ -215,6 +214,10 @@
 
                 pTimerWatch.innerHTML = showSWTime(tTimer);
             }, 100);
+
+            btnTimerStop.removeAttribute("disabled");
+            btnTimerSet.setAttribute("disabled", "disabled");
+            btnTimerReset.setAttribute("disabled", "disabled");
         }
 
         function timerStop() {
@@ -226,8 +229,10 @@
         function displayItem(index) {
             let item = document.getElementsByClassName("item");
             for(let i = 0; i < item.length; i++) {
+                //menu[index].classList.remove("active");
                 item[i].style.display = "none";
             }
+            //menu[index].classList.add("active");
             item[index].style.display = "block";
         }
     </script>
