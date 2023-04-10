@@ -8,7 +8,8 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { padding: 30px 50px;}
-        article { background-color: lightgoldenrodyellow; border: 1px solid gray; padding: 15px; margin: 20px 0; text-align: center; }
+        article,
+        nav { background-color: lightgoldenrodyellow; border: 1px solid gray; padding: 15px; margin: 20px 0; text-align: center; }
         .content { width: 80%; margin: 10px auto; padding: 20px; background-color: rgb(150, 125, 231); }
         input { font-size: 30px; }
         button { width: 150px; padding: 5px; font-size: 25px; background-color: #00c896; border: none; }
@@ -23,7 +24,12 @@
     </style>
 </head>
 <body>
-    <article>
+    <nav>
+        <button class="menu" onclick="displayItem(0)">알람</button>
+        <button class="menu" onclick="displayItem(1)">스톱워치</button>
+        <button class="menu" onclick="displayItem(2)">타이머</button>
+    </nav>
+    <article class="item">
         <h1>알람</h1>
         <div class="content">
             <input id="alarmDate" type="date">
@@ -36,7 +42,7 @@
         </div>
     </article>
     
-    <article>
+    <article class="item" style="display: none;">
         <h1>스톱워치</h1>
         <div class="content">
             <p id="pStopWatch">00:00:00:0</p>
@@ -46,7 +52,7 @@
         </div>
     </article>
 
-    <article>
+    <article class="item" style="display: none;">
         <h1>타이머</h1>
         <div class="content">
             <input id="tSetHours" type="number" min="0" max="24">
@@ -214,6 +220,15 @@
         function timerStop() {
             clearInterval(timerID);
             alarmAudio.pause();
+        }
+
+        // 메뉴 버튼
+        function displayItem(index) {
+            let item = document.getElementsByClassName("item");
+            for(let i = 0; i < item.length; i++) {
+                item[i].style.display = "none";
+            }
+            item[index].style.display = "block";
         }
     </script>
 </body>
