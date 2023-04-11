@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effect</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        #content { padding: 15px; background-color: yellow; }
+        div#animateContent {
+            background-color: #99bb22;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hide, Show</h1>
+    <p>
+        <button id="btnHide" type="button">Hide</button>
+        <button id="btnShow" type="button">Show</button>
+        <button id="btnToggle" type="button">Toggle</button>
+    </p>
+    <div id="content">
+        <p>dufasjflkfjsadl;jfjadlfajdfkljal;kfj;lkadsjfjlakjfkldx</p>
+        <p>dufasjflkfjsadl;jfjadlfajdfkljal;kfj;lkadsjfjlakjfkldx</p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            const content = $("#content");
+            $("#btnHide").click(() => content.hide(1000, () => alert("사라졌습니다.")));
+            $("#btnShow").click(() => content.show(1000, () => alert("나타났습니다.")));
+            $("#btnToggle").click(() => content.toggle(1000));
+        });
+    </script>
+
+    <hr>
+    <h1>Fade in / Fade out</h1>
+    <P>
+        <button id="btnFadeIn" type="button">fadeIn</button>
+        <button id="btnFadeOut" type="button">fadeOut</button>
+        <button id="btnFadeToggle" type="button">fadeToggle</button>
+        <button id="btnFadeTo" type="button">faedTo</button>
+    </P>
+    <div id="fadeContent">
+        <p>dufasjflkfjsadl;jfjadlfajdfkljal;kfj;lkadsjfjlakjfkldx</p>
+        <p>dufasjflkfjsadl;jfjadlfajdfkljal;kfj;lkadsjfjlakjfkldx</p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            const fadeContent = $("#fadeContent");
+
+            $("#btnFadeIn").click(function() {
+                fadeContent.fadeIn(1000);
+            });
+            $("#btnFadeOut").click(function() {
+                fadeContent.fadeOut(1000);
+            });
+            $("#btnFadeToggle").click(function() {
+                fadeContent.fadeToggle(1000);
+            });
+            $("#btnFadeTo").click(function() {
+                let opacity = prompt("불투명도(0~1) 사이의 값을 입력해주세요");
+                fadeContent.fadeTo(1000, opacity);
+            });
+        });
+    </script>
+
+    <hr>
+    <h1>slide up, slide down</h1>
+    <p>
+        <button id="btnSlideUp">slideup</button>
+        <button id="btnSlideDown">slidedown</button>
+        <button id="btnSlideToggle">slidetoggle</button>
+    </p>
+    <div id="slideContent">
+        <p>dufasjflkfjsadl;jfjadlfajdfkljal;kfj;lkadsjfjlakjfkldx</p>
+        <p>dufasjflkfjsadl;jfjadlfajdfkljal;kfj;lkadsjfjlakjfkldx</p>
+    </div>
+    <script>
+        $(() => {
+            const slideContent = $("#slideContent");
+
+            $("#btnSlideUp").click(() => slideContent.slideUp(1000));
+            $("#btnSlideDown").click(() => slideContent.slideDown(1000));
+            $("#btnSlideToggle").click(() => slideContent.slideToggle(1000));
+        });
+    </script>
+
+    <hr>
+    <h1>Animate</h1>
+    <p>
+        <button id="btnAnimate">Animate</button>
+    </p>
+    <div id="animateContent"></div>
+    <script>
+        $(() => {
+            let animateContent = $("#animateContent");
+
+            $("#btnAnimate").click(() => {
+                animateContent.animate({
+                    left: "250px",
+                    opacity: "0.5",
+                    //height: "+=50px",
+                    heigth: "toggel",
+                    width: "+=50px"
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

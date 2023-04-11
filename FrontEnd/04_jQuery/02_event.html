@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <h1 id="h1Test">마우스 이벤트</h1>
+    <script>
+        $(document).ready(function() {
+            // 하나의 요소에 여러 개의 이벤트를 적용하고 싶은 경우
+            $("#h1Test").on({
+                click: function() {
+                    // this를 사용하는 경우 화살표 함수를 사용할 수 없다.
+                    $(this).css("background-color", "yellow");  
+                },
+                mouseenter: function() {
+                    $(this).css("background-color", "blue");
+                }
+            });
+            /*
+            $("#h1Test").click(function() {
+                // css(get, set)임
+                $(this).css("background-color", "yellow");
+            });
+            $("#h1Test").on("mouseenter", function() {
+                $(this).css("background-color", "blue");
+            });
+            */
+        })
+    </script>
+</body>
+</html>
