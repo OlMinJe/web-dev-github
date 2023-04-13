@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+* {padding: 0; margin: 0; box-sizing: border-box; font-family: "나눔 고딕"; color:#333333;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: inherit;}
+
+
+html, body {
+  width: 1200px;
+  font-size: 20px;
+}
+header {
+  float: left;
+  height: 670px; 
+  width: 200px; 
+}
+.top {
+  float: left;
+  height: 600px;
+  width: 200px;
+}
+.logo {
+  float: left;
+  height: 100px;
+  width: 200px;
+  background-color: #EEEEEE;
+}
+nav {
+  float: left;
+}
+.menu {
+  float: left;
+  width: 150px;
+  background-color: #EEEEEE;
+}
+.menu>li {
+  float: left;
+  width: 150px; 
+}
+.imgslide {
+  float: left;
+  height: 350px;
+  width: 1000px;
+  background-color: #00FFFF;
+}
+.contents {
+  float: left;
+  height: 200px;
+  width: 1000px;
+  background-color: #FF0000;
+}
+.notice {
+  float: left;
+  height: 200px;
+  width: 300px;
+}
+.gallery {
+  float: left;
+  height: 200px;
+  width: 300px;
+}
+.shortcut {
+  float: left;
+  height: 200px;
+  width: 400px;
+}
+footer {
+  float: left;
+  height: 120px;
+  width: 1000px;
+  background-color: #EEEEEE
+}
+.copy {
+  float: left;
+  height: 120px;
+  width: 600px;
+}
+.site {
+  float: right;
+  height: 120px;
+  width: 400px;
+  background-color: #FFFF00;
+}
+.site>ul {
+  float: left;
+  width: 400px;
+}
+.site>ul>li {
+  float: left;
+  height: 60px;
+  width: 400px;
+}
