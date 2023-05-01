@@ -8,6 +8,7 @@ a {text-decoration: none; color: inherit;}
 html, body {
   width: 1200px;
   font-size: 20px;
+  margin: 0 auto;
 }
 header {
   float: left;
