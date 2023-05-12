@@ -1,18 +1,15 @@
 {
-  "name": "web-development-complete-guide",
+  "name": "nodejsstudy",
   "version": "1.0.0",
-  "description": "This repository contains course code and other resources (e.g. slides) that are shown, created or used in our [complete web development course](https://acad.link/web-dev).",
+  "description": "Getting started with Node & Express",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "Maximilian Schwarzmüller (Academind GmbH)",
-  "license": "MIT",
+  "author": "lmj",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
+    "express": "^4.18.2",
     "nodemon": "^2.0.20"
   }
 }
